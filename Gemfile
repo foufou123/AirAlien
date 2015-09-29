@@ -15,8 +15,10 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 gem 'devise'
 gem 'omniauth-facebook'
-
+gem 'omniauth-google-oauth2'
+gem 'paperclip'
 gem 'toastr-rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug'
