@@ -2,6 +2,10 @@ class Room < ActiveRecord::Base
   belongs_to :user
   has_many :photos
 
+# This tells to google maps which fields are used to map
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   validates :home_type, presence: true
   validates :room_type, presence: true
   validates :accomodate, presence: true
