@@ -1,6 +1,7 @@
 class Room < ActiveRecord::Base
   belongs_to :user
   has_many :photos
+  has_many :reservations
 
 # This tells to google maps which fields are used to map
   geocoded_by :address
